@@ -7,7 +7,7 @@ include("includes/includedFiles.php");
 <div class="gridViewContainer">
 	
 	<?php
-		$gameQuery = mysqli_query($con, "SELECT * FROM games ORDER BY RAND() LIMIT 4");
+		$gameQuery = mysqli_query($con, "SELECT * FROM games ORDER BY RAND() LIMIT 5");
 
 		while($row = mysqli_fetch_array($gameQuery)) {
 
