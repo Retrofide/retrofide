@@ -127,7 +127,7 @@ $(function() {
 
 </div>
 
-<div class="gridViewContainer">
+<div class="gridViewContainerSearch">
 	<h2>Games</h2>
 	<?php
 		$gameQuery = mysqli_query($con, "SELECT * FROM games WHERE title LIKE '%$term%' LIMIT 10");

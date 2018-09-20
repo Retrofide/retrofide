@@ -22,6 +22,7 @@ body {
 	height:100%;
 	width:100%;
 	background-size: cover;
+	max-height: 100%;
 }
 
 .bgInfoDiv {
@@ -362,6 +363,7 @@ body {
 }
 
 .tracklist {
+	background-color: #ff004f0f;
 	padding: 0;
 	font-size: 1.2em;
 }
@@ -374,25 +376,23 @@ body {
 
 /* OPTIONAL BORDER */
 .tracklistRow {
-    border: 1px solid #b9f10417;
-    border-radius: 5px;
+    border: 1px solid #524050b8;
+	border-radius: 5px;
+	background-color: #52405024;
+	margin-bottom: -1px;
+	border-left: none;
+	border-right: none;
 }
 
 .tracklistRow:hover {
+	/*background-color: #5b2e5880;*/
+	background: linear-gradient(to right, #623e854f, #85405b2e);
 	transition-duration: 1.5s;
 }
 
 .tracklistRow span {
 	font-weight: bold;
 	font-size: .9em;
-}
-.tracklistRow {
-	background-color: #52405054;
-}
-
-.tracklistRow:hover {
-	/*background-color: #5b2e5880;*/
-	background: linear-gradient(to right, #623e854f, #85405b2e);
 }
 
 .tracklistRow .trackCount {
@@ -489,9 +489,10 @@ body {
 .searchContainer,
 .artistsContainer,
 .tracklistContainer,
-.gridViewContainer {
-	border-bottom: 4px groove #b9f1041c;
-    border-radius: 0px 0px 10px 10px;
+.gridViewContainerSearch {
+	border-bottom: 4px groove #ff004f14;
+	border-radius: 0px 0px 20px 20px;
+	box-shadow: 0px 5px 15px 4px rgba(0,0,0,.6);
 }
 
 .searchContainer {
@@ -539,13 +540,13 @@ input:focus {
 
 .searchResultRow:hover {
 	background-color: #4a454d63;
-	border-radius: 5px;
+	border-radius: 10px;
 }
 
-.searchResultRow .artistName span {
-	color: #fff;
-	font-size: 1.2em;
-    font-weight: 600;
+.searchResultRow span{
+	color: #b9f104;
+	font-weight: 600;
+	padding-left: 20px;
 }
 
 .searchResultRow {
@@ -559,7 +560,8 @@ input:focus {
 
 .tracklistContainer h2,
 .artistsContainer h2,
-.gridViewContainer h2 {
+.gridViewContainerSearch h2 {
+	padding-top: 10px;
 	text-align: center;
 }
 
