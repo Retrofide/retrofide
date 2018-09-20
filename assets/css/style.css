@@ -482,11 +482,87 @@ body {
 	transition-duration: .5s;
 }
 
+[role="link"] {
+	cursor: pointer;
+}
+
+.searchContainer,
+.artistsContainer,
+.tracklistContainer,
+.gridViewContainer {
+	border-bottom: 4px groove #b9f1041c;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.searchContainer {
+	background-color: #4a454d63;
+    padding: 10px 15px;
+}
+
+.searchContainer h4 {
+	margin: 0;
+	font-weight: 600;
+	color:#ffffff82;
+}
+
+.searchContainer .searchInput {
+	width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #b9f104;
+    font-weight: 700;
+    font-size: 18px;
+	letter-spacing: 1px;
+	padding: 10px;
+}
+
+.searchContainer ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fff;
+}
+
+input:focus {
+	outline: none;
+}
+
+.searchResultRow {
+	padding: 15px 10px;
+}
+
+.searchResultRow:hover {
+	background-color: #4a454d63;
+	border-radius: 5px;
+}
+
+.searchResultRow .artistName span {
+	color: #fff;
+	font-size: 1.2em;
+    font-weight: 600;
+}
+
+.searchResultRow {
+	font-size: 1.2em;
+    font-weight: 600;
+}
+
+.searchResultRow span:hover {
+	color: #b9f103;
+}
+
 .tracklistContainer h2,
-.gridViewCOntainer h2 {
+.artistsContainer h2,
+.gridViewContainer h2 {
 	text-align: center;
 }
 
-[role="link"] {
-	cursor: pointer;
+.noResults {
+	font-size: 1.2em;
 }

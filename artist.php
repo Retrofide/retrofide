@@ -40,8 +40,11 @@ $artist = new Artist($con, $artistId);
 
 			$i = 1;
 			foreach($songIdArray as $songId) {
-				
-				
+
+				if($i > 5) {
+					break;
+				}
+					
 				//$gameSong->getTitle();
 				$gameSong = new Song($con, $songId);
 				$gameArtist = $gameSong->getArtist();
