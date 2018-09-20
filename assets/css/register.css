@@ -1,0 +1,190 @@
+html, body {
+	padding: 0px;
+	margin: 0;
+	height: 100%;
+}
+
+#background {
+	
+	background: linear-gradient(to top, rgba(100, 100, 246,0.3), rgba(100, 0, 0, 0.5)),url(../images/bg.jpg);
+	background-color: #000;
+	opacity: 0.8;
+	background-position: center;
+	background-size: cover;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+#loginContainer * {
+	color: #fff;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	box-sizing: border-box;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #FFF;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #FFF;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #FFF;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #FFF;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #FFF;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #FFF;
+}
+
+#loginContainer {
+	width: 60%;;
+	margin: auto;
+	position: relative;
+	max-width: 1400px;
+	min-width: 420px;
+}
+
+#inputContainer {
+	width: 400px;
+	padding: 39px;
+	float: left;
+	border-right: 1px solid #a4ff3378;
+	min-width: 420px;
+	display: inline-flex;
+}
+
+#inputContainer h2 {
+	text-align: center;
+}
+
+#inputContainer label {
+		font-size: 14px;
+		margin-top: 15px;
+		font-size: 1.2em;
+		color: #ffffff70;
+		display: block;
+}
+
+#inputContainer input[type="text"],
+#inputContainer input[type="email"],
+#inputContainer input[type="password"] {
+	display: block;
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid #fff;
+    height: 27px;
+    line-height: 35px;
+    width: 100%;
+    border-color: #a4ff3378;
+    font-size: 1em;
+}
+
+#inputContainer button {
+	background-color: #ff005e4d;
+    border: 2px solid #ff005e;
+    border-radius: 250px;
+    color: white;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    margin: 20px auto;
+    height: 41px;
+    width: 100%;
+}
+
+#inputContainer button:hover {
+   cursor: pointer;
+   background-color: #ff005e;
+   border: 1px solid #a4ff3378;
+   transition-duration: .6s;
+}
+
+#inputContainer .errorMessage {
+	color: #b6ff5c;
+    font-size: 16px;
+    display: block;
+}
+
+.hasAccountTest span {
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+}
+
+.hasAccountText {
+	cursor: pointer;
+}
+
+#registerForm, #loginForm {
+	display:none;
+}
+
+.logoHeader{
+	display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+#beta {
+	text-transform: uppercase;
+	text-align: right;
+	margin-top: 3px;
+	color: #ff337e;
+	opacity: .75;
+}
+
+#beta:hover {
+	color: #b6ff5c;
+}
+
+
+
+#loginText {
+    display: table-cell;
+}
+#loginText h1 {
+	color: #ff005e;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 3px 3px #0000008c;
+    text-align: center;
+}
+
+#loginText h2 {
+	text-align: center;
+}
+
+#loginText ul {
+}
+
+#loginText li {
+	font-size: 17px;
+	list-style-type: none;
+	padding: 0px 0px 10px 30px;
+	background: url(../images/icons/heart.png) no-repeat;
+}
+
+#logoRegister {
+	height: auto;
+	width: 100%;
+	margin: auto;
+	max-width: 230px;
+	padding-bottom: 3px;
+}
+
+#logoRegisterIcon {
+	width: 60px;
+	padding-right: 10px;
+}
+
