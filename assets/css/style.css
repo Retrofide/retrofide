@@ -1,8 +1,7 @@
 html, body {
 	padding: 0px;
 	margin: 0px;
-	height: 100%;
-	background-color: white;
+	background-color: black;
 }
 
 * {
@@ -18,7 +17,7 @@ body {
 
 #backgroundContainer {
 	background-color: black;
-	background: linear-gradient(to right, transparent, #ff004f30, #36005f59), url('../images/bg/2.jpg');
+	background: linear-gradient(to right, #ff004f12, #ff004f40, #c500ff24), url(../images/bg/2.jpg);
 	height:100%;
 	width:100%;
 	background-size: cover;
@@ -43,7 +42,8 @@ body {
 
 #nowPlayingBarContainer {
 	width: 100%;
-    background: linear-gradient(to bottom, #512842, rgb(48, 36, 39));
+	background: linear-gradient(to bottom, #512842, rgb(48, 36, 39));
+	box-shadow: 25px 0px 32px 12px rgba(0,0,0,0.4);
     bottom: 0;
     position: fixed;
     min-width: 640px;
@@ -136,9 +136,6 @@ body {
     height: 3px;
     width: 0;
     border-radius: 2px;
-    -webkit-box-shadow: 0px 0px 8px 2px rgba(185,241,3,0.75);
-	-moz-box-shadow: 0px 0px 8px 2px rgba(185,241,3,0.75);
-	box-shadow: 0px 0px 8px 2px rgba(185,241,3,0.75);
 }
 
 .playbackBar .progressBar {
@@ -200,6 +197,7 @@ body {
 
 #navBarContainer {
 	background: linear-gradient(to top, #b8325a38, rgba(49, 62, 85, 0.25));
+	box-shadow: -4px 0px 30px 15px rgba(0,0,0,0.2);
     width: 215px;
     height: 100vh;
     position: fixed;
@@ -304,13 +302,11 @@ body {
 
 .gridViewItem img {
 	width: 100%;
+	opacity: .8;
 }
 
 .gridViewItem img:hover {
-	-webkit-box-shadow: inset 0px 0px 16px 5px rgba(185,241,3,0.6);
-	-moz-box-shadow: inset 0px 0px 16px 5px rgba(185,241,3,0.6);
-	box-shadow: 0px 0px 16px 5px rgba(185,241,3,0.2);
-	transition-duration: 0.25s;
+	opacity: 1;
 }
 
 .gridViewItem a {
@@ -328,7 +324,7 @@ body {
 }
 
 .entityInfo {
-	padding: 40px 0 10px 0;
+	padding: 10px 10px 10px 0;
     display: inline-block;
     width: 100%;
 }
@@ -376,7 +372,7 @@ body {
 
 /* OPTIONAL BORDER */
 .tracklistRow {
-    border: 1px solid #524050b8;
+    border: 1px solid #905e8b29;
 	border-radius: 5px;
 	background-color: #52405024;
 	margin-bottom: -1px;
@@ -417,10 +413,6 @@ body {
 
 .tracklistRow:hover .trackCount {
 	visibility: hidden;
-}
-
-.tracklistRow .trackName {
-	color: #b9f103;
 }
 
 .tracklistRow .trackInfo {
@@ -490,9 +482,17 @@ body {
 .artistsContainer,
 .tracklistContainer,
 .gridViewContainerSearch {
-	border-bottom: 4px groove #ff004f14;
-	border-radius: 0px 0px 20px 20px;
-	box-shadow: 0px 5px 15px 4px rgba(0,0,0,.6);
+	border-top: 4px solid #82587a17;
+	border-bottom: 4px solid #82587a17;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.2);
+}
+
+.searchContainer span,
+.artistsContainer span,
+.tracklistContainer span,
+.gridViewContainerSearch span{
+	
 }
 
 .searchContainer {
@@ -536,35 +536,53 @@ input:focus {
 
 .searchResultRow {
 	padding: 15px 10px;
+	border: 1px solid #905e8b70;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
 }
 
 .searchResultRow:hover {
 	background-color: #4a454d63;
 	border-radius: 10px;
+	
 }
 
 .searchResultRow span{
-	color: #b9f104;
+	color: white;
 	font-weight: 600;
 	padding-left: 20px;
 }
 
 .searchResultRow {
-	font-size: 1.2em;
+	font-size: 1.1em;
     font-weight: 600;
 }
 
-.searchResultRow span:hover {
-	color: #b9f103;
+.searchResultRow:hover {
+	background: linear-gradient(to right, #623e854f, #85405b2e);
 }
 
-.tracklistContainer h2,
-.artistsContainer h2,
-.gridViewContainerSearch h2 {
+.tracklistContainer h3,
+.artistsContainer h3,
+.gridViewContainerSearch h3 {
 	padding-top: 10px;
 	text-align: center;
+	color: #b9f104;
 }
 
-.noResults {
-	font-size: 1.2em;
+.noResults,
+.noResults2 {
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #b9f104;
+	padding-left: 50px;
+}
+
+.gridViewContainerSearch .gridViewItem {
+	padding-left: 10px;
+}
+
+.gridViewContainer {
+	max-width: 50%;
 }

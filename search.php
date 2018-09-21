@@ -40,7 +40,7 @@ $(function() {
 <?php if($term == "") exit(); ?>
 
 <div class="tracklistContainer">
-    <h2>Songs</h2>
+<h3>Songs</h3>
 	<ul class="tracklist">
 
 		<?php
@@ -103,32 +103,32 @@ $(function() {
 
 <div class="artistsContainer">
 
-            <h2>Artists</h2>
-            <?php
-            $artistsQuery = mysqli_query($con, "SELECT id FROM artists WHERE name LIKE '%$term%' LIMIT 10");
+<h3>Artists</h3>
+	<?php
+		$artistsQuery = mysqli_query($con, "SELECT id FROM artists WHERE name LIKE '%$term%' LIMIT 10");
 
-            if(mysqli_num_rows($artistsQuery) == 0) {
-                echo "<span class='noResults'>No artists found for " . $term . "</span>";
-            }
+			if(mysqli_num_rows($artistsQuery) == 0) {
+				echo "<span class='noResults'>No artists found for " . $term . "</span>";
+			}
 
-            while($row = mysqli_fetch_array($artistsQuery)) {
-                $artistFound = new Artist($con, $row['id']);
-                echo "<div class='searchResultRow'>
-                        <div class='artistName'></div>
-                            <span role='link' tabindex='0' onclick='openPage(\"artist.php?id=" . $artistFound->getId() . "\")'>
-                            "
-                            . $artistFound->getName() .
-                            "
-                            </span>
-                    </div>";
-            }
+			while($row = mysqli_fetch_array($artistsQuery)) {
+				$artistFound = new Artist($con, $row['id']);
+				echo "<div class='searchResultRow'>
+						<div class='artistName'></div>
+							<span role='link' tabindex='0' onclick='openPage(\"artist.php?id=" . $artistFound->getId() . "\")'>
+							"
+							. $artistFound->getName() .
+							"
+							</span>
+					</div>";
+			}
 
-            ?>
+?>
 
 </div>
 
 <div class="gridViewContainerSearch">
-	<h2>Games</h2>
+<h3>Games</h3>
 	<?php
 		$gameQuery = mysqli_query($con, "SELECT * FROM games WHERE title LIKE '%$term%' LIMIT 10");
 
