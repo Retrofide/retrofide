@@ -42,7 +42,7 @@ body {
 
 #nowPlayingBarContainer {
 	width: 100%;
-	background: linear-gradient(to bottom, #591b3f, #65062340), url(../images/bg/bar.jpg);
+	background: linear-gradient(to bottom, #591b3f, #65062340);
 	box-shadow: 25px 0px 32px 12px rgba(0,0,0,0.4);
     bottom: 0;
     position: fixed;
@@ -143,7 +143,7 @@ body {
 }
 
 .playbackBar .progressBar {
-	margin-top: 3px;
+	margin-top: 4px;
 }
 
 #nowPlayingLeft {
@@ -472,9 +472,9 @@ body {
 }
 
 .artistButton:hover {
-	background-color: #ff004f75;
-	border: 2px solid rgba(185,241,3,0.75);
-	transition-duration: .5s;
+	background-color: #ff004f;
+	border-color:#ff004f;
+	transition-duration: .3s;
 }
 
 [role="link"] {
@@ -565,6 +565,10 @@ input:focus {
 	background: linear-gradient(to right, #623e854f, #85405b2e);
 }
 
+.tracklistContainer h2 {
+	text-align: center;
+}
+
 .tracklistContainer h3,
 .artistsContainer h3,
 .gridViewContainerSearch h3 {
@@ -594,3 +598,36 @@ input:focus {
 .gridViewContainer {
 	max-width: 50%;
 }
+
+.playlistContainer {
+	padding: 10px 0;
+}
+
+.playlistButton {
+	color: #fff;
+    cursor: pointer;
+    background-color: #ff004f25;
+    margin-bottom: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    border-radius: 11px;
+    padding: 8px;
+    min-width: 105px;
+}
+
+.playlistButton:hover {
+	background-color: #ff004f;
+	border-color:#ff004f;
+	transition-duration: .3s;
+}
+
+.buttonItems .button {
+	display: block;
+	margin: 0 auto 20px auto;
+}
+
+.playlistHeader {
+	text-align: center;
+}
+

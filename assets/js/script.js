@@ -27,6 +27,25 @@ function openPage(url) {
 
 }
 
+function createPlaylist() {
+	var popup = prompt("Name your playlist");
+
+	if(popup != "") {
+		
+		$.post("includes/handlers/ajax/createPlaylist.php", {name: popup, username: userLoggedIn })
+		.done(function(error) {
+
+			if(error != null) {
+				alert(error);
+				return;
+			}
+			//do something when AJAX retruns
+			openPage("yourMusic.php");
+		})
+	}
+}
+
+
 function formatTime(seconds) {
 	var time = Math.round(seconds);
 	var minutes = Math.floor(time / 60); //Rounds down

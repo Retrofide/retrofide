@@ -130,6 +130,7 @@ function setMute() {
 		$(".volumeBar .progress").css("visibility","visible");
 	}
 }
+
 /*
 function musicChecker() {
 	var testVar = audioElement.audio.currentTime = 0;
