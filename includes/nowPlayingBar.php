@@ -19,7 +19,7 @@ $(document).ready(function() {
 	audioElement = new Audio();
 	setTrack(newPlaylist[0], newPlaylist, false);
 	updateVolumeProgressBar(audioElement.audio);
-
+	
 
 	$("#nowPlayingBarContainer").on("mousedown touchstart mousemove touchmove", function(e) {
 		e.preventDefault();
@@ -120,9 +120,23 @@ function setRepeat() {
 function setMute() {
 	audioElement.audio.muted = !audioElement.audio.muted;
 	var imageName = audioElement.audio.muted ? "volume-mute.png" : "volume.png";
-	$(".controlButton.volume img").attr("src", "assets/images/icons/" + imageName);
-}
+	$(".controlButton.volume img").attr("src", "assets/images/icons/" + imageName).is(':visible');
 
+	var isVisible = audioElement.audio.muted;
+
+	if (isVisible == true) {
+		$(".volumeBar .progress").css("visibility","hidden");
+	} else {
+		$(".volumeBar .progress").css("visibility","visible");
+	}
+}
+/*
+function musicChecker() {
+	var testVar = audioElement.audio.currentTime = 0;
+		console.log("SHOW");
+
+}
+*/
 function setShuffle() {
 	shuffle = !shuffle;
 	var imageName = shuffle ? "shuffle-active.png" : "shuffle.png";

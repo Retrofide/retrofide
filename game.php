@@ -71,6 +71,20 @@ $publisher = $game->getPublisher();
 		<script>
 			var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
 			tempPlaylist = JSON.parse(tempSongIds);
+/*
+			function checkPlay() {
+			var imageName = audioElement.audio.muted ? "volume-mute.png" : "assets/images/icons/play-white.png";
+			$(".controlButton.volume img").attr("src", "assets/images/icons/" + imageName).is(':visible');
+
+			var isVisible = audioElement.audio.muted;
+
+			if (isVisible == true) {
+				$(".volumeBar .progress").css("visibility","hidden");
+			} else {
+				$(".volumeBar .progress").css("visibility","visible");
+			}
+			}
+*/
 		</script>
 
 	</ul>

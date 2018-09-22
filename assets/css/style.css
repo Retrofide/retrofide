@@ -17,7 +17,7 @@ body {
 
 #backgroundContainer {
 	background-color: black;
-	background: linear-gradient(to right, #ff004f12, #ff004f40, #c500ff24), url(../images/bg/2.jpg);
+	background: linear-gradient(to right, #ff004f12, #ff004f57, #c500ff24), url(../images/bg/2.jpg);
 	height:100%;
 	width:100%;
 	background-size: cover;
@@ -42,7 +42,7 @@ body {
 
 #nowPlayingBarContainer {
 	width: 100%;
-	background: linear-gradient(to bottom, #512842, rgb(48, 36, 39));
+	background: linear-gradient(to bottom, #591b3f, #65062340), url(../images/bg/bar.jpg);
 	box-shadow: 25px 0px 32px 12px rgba(0,0,0,0.4);
     bottom: 0;
     position: fixed;
@@ -125,9 +125,10 @@ body {
 }
 
 .progressBarBG {
-	background-color: #68535b;
+	background-color: #2e2e2e;
     height: 4px;
-    width: 100%;
+	width: 100%;
+	border: 1px solid #78235ba8;
     border-radius: 2px;
 }
 
@@ -135,7 +136,10 @@ body {
 	background-color: #b9f103;
     height: 3px;
     width: 0;
-    border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(153,255,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 1px rgba(153,255,0,0.5);
+	box-shadow: 0px 0px 5px 1px rgba(153,255,0,1);
 }
 
 .playbackBar .progressBar {
@@ -250,7 +254,7 @@ body {
 
 .navItem {
 	padding: 7px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     display: block;
     letter-spacing: 1px;
@@ -302,11 +306,10 @@ body {
 
 .gridViewItem img {
 	width: 100%;
-	opacity: .8;
 }
 
 .gridViewItem img:hover {
-	opacity: 1;
+	transition-duration: 1s;
 }
 
 .gridViewItem a {
@@ -555,7 +558,6 @@ input:focus {
 }
 
 .searchResultRow {
-	font-size: 1.1em;
     font-weight: 600;
 }
 
@@ -566,17 +568,23 @@ input:focus {
 .tracklistContainer h3,
 .artistsContainer h3,
 .gridViewContainerSearch h3 {
-	padding-top: 10px;
 	text-align: center;
 	color: #b9f104;
 }
 
 .noResults,
 .noResults2 {
-	font-size: 1.1em;
 	font-weight: bold;
-	color: #b9f104;
+	color: #fff;
 	padding-left: 50px;
+}
+
+.noResults {
+	font-size: 1.1em;
+}
+
+.noResults2 {
+	font-size: .9em;
 }
 
 .gridViewContainerSearch .gridViewItem {
